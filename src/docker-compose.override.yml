@@ -22,7 +22,7 @@ services:
       - "8080:8000"
       - "9000:9000"
     volumes:
-      - "portainer_data:/data"
+      - "portainer_data:/var/run/docker.sock"
 
   catalog.api:
     container_name: catalog.api
