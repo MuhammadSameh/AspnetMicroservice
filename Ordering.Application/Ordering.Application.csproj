@@ -8,4 +8,9 @@
     <ProjectReference Include="..\src\Services\Ordering\Ordering.Domain\Ordering.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Behaviours\" />
+    <Folder Include="Features\" />
+  </ItemGroup>
+
 </Project>
