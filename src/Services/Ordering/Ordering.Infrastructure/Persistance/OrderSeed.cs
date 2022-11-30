@@ -10,16 +10,9 @@ namespace Ordering.Infrastructure.Persistance
 {
     public class OrderSeed
     {
-        private readonly OrderContext _context;
-        private readonly ILogger<OrderSeed> _logger;
+        
 
-        public OrderSeed(OrderContext context, ILogger<OrderSeed> logger)
-        {
-            _context = context;
-            _logger = logger;
-        }
-
-        public async Task SeedOrderAsync()
+        public async static Task SeedOrderAsync(OrderContext _context, ILogger<OrderSeed> _logger)
         {
             if (_context.Orders.Any())
             {
