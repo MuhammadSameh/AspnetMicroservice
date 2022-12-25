@@ -14,7 +14,7 @@ namespace Ordering.Infrastructure.Persistance
 
         public async static Task SeedOrderAsync(OrderContext _context, ILogger<OrderSeed> _logger)
         {
-            if (_context.Orders.Any())
+            if (!_context.Orders.Any())
             {
                 await _context.Orders.AddRangeAsync(GetPreconfiguredOrders());
                 await _context.SaveChangesAsync();
